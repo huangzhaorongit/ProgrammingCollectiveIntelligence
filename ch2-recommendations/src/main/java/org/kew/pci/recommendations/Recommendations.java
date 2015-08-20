@@ -262,7 +262,7 @@ public class Recommendations {
 	}
 
 	// Get recommendations: reviewers by reviewer
-	public Map<Reviewer,Double> getReviewerRecommendations(Reviewer reviewer, int similarityAlgorithm){
+	public Map<Reviewer,Double> getReviewerRecommendationsByReviewer(Reviewer reviewer, int similarityAlgorithm){
 		Map<Reviewer,Double> m = new HashMap<Reviewer,Double>();
 		for (Reviewer r : getReviewersFromReviews()){
 			if (!r.equals(reviewer)){
@@ -338,7 +338,7 @@ public class Recommendations {
 	 * @return
 	 */
 	// Get recommendations: reviewers by item
-	public Map<Reviewer,Double> getReviwerRecommendations(Item item, int similarityAlgorithm){
+	public Map<Reviewer,Double> getReviewerRecommendationsByItem(Item item, int similarityAlgorithm){
 		Map<Reviewer,Double> rankings = new HashMap<Reviewer,Double>();
 		
 		Map<Reviewer,Double> totals = new HashMap<Reviewer,Double>();
